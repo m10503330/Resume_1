@@ -1,0 +1,448 @@
+/*  */
+@font-face {
+  font-family: 'fontello';
+  src: url('./font/fontello.eot?26621818');
+  src: url('./font/fontello.eot?26621818#iefix') format('embedded-opentype'),
+       url('./font/fontello.woff2?26621818') format('woff2'),
+       url('./font/fontello.woff?26621818') format('woff'),
+       url('./font/fontello.ttf?26621818') format('truetype'),
+       url('./font/fontello.svg?26621818#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?26621818#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-mail:before { content: '\e801'; } /* '' */
+.icon-phone:before { content: '\e802'; } /* '' */
+/* layout */
+*{
+	/*border: 1px solid;*/
+	box-sizing: border-box;
+
+}
+
+.wapper{
+	border: 1px solid ;
+	max-width: 768px;
+	margin:60px auto;
+	background-color: #FFFFBB;
+}
+.header{
+	margin:30px;
+
+	width:calc(100% - 60px );
+	max-width: 768px;
+	height: 360px;
+}
+.left,.right{
+	width:100%;
+	height: 100%;
+	flex:1;
+}
+.left{
+	padding-top:30px 
+}
+.right{
+	margin-top:-120px ;
+}
+.content{
+	margin:30px;
+	display: flex;
+	justify-content: center;
+}
+/* style */
+h1,h2,h3,h4,h5,h6{
+	margin:0;
+	color;#484848;
+}
+h1{
+	font-size:28px;
+	font-weight:800;
+	font-family: 'helvetica','roboto', arial ,sans-serif;
+	margin-top:24px;
+	margin-bottom:24px;
+}
+h2{
+	font-size:22px;
+	font-weight:600;
+	font-family: 'helvetica','roboto', arial ,sans-serif;
+	margin-top:24px;
+	margin-bottom:24px;
+}
+h3{
+	font-size:18px;
+	font-weight:600;
+	font-family: 'helvetica','roboto', arial ,sans-serif;
+	line-height: 24px;
+	margin-top:0px;
+	margin-bottom:8px;
+}
+p{
+	font-size:14px;
+	font-weight:400;
+	font-family: 'helvetica','roboto', arial ,sans-serif;
+	letter-spacing: 0;
+	margin-top:8px;
+	margin-bottom:16px;
+}
+h2>span{
+	font-size:14px;
+	text-align: bottom;
+	color:#AAAAAA;
+	font-weight: 200;
+}
+h3>span{
+	font-size:12px;
+	text-align: bottom;
+	color:#AAAAAA;
+	font-weight: 200;
+}
+hr{
+	width: 95%;
+	border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(255,0,255,0.75), rgba(0,0,0,0));
+}
+ul{
+	padding: 0;
+  	list-style: none;
+
+}
+/* header */
+.name{
+	position: relative;
+	background-color: #FF3333;
+	margin-left: 20px;
+	padding-left: 80px;
+}
+.name:before{
+	position: absolute;
+	content: "";
+	height: 60px;
+	width: 60px;
+	top:50%;
+	left:0;
+	transform: translate(-50%,-50%)  rotate(45deg);
+	background-color: #FFFFBB;
+
+}
+.name>span {
+	font-size: 16px;
+	margin-left: 16px;
+	text-align: bottom;
+}
+.aboutme{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+
+}
+.photo{
+	flex:1;
+	height: 100%;
+	
+	overflow: hidden;
+	padding: 20px 30px 100px 30px;
+
+}
+.photo>.image{
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	background-image: url(image/me.jpg);
+	background-size: cover;
+
+}
+.connection{
+	flex:2;
+}
+.btn{
+	margin-top:20px;
+	margin-right:20px;
+	float: left;
+	border: 1px solid #FF8888;
+	width: 80px;
+	height: 60px;
+	border-radius: 25%;
+	text-decoration: none;
+	color:#FF8888;
+	text-align: center;
+	line-height: 60px;
+}
+.btn:hover{
+	border: 1px solid #fff;
+	background-color: #FF8888;	
+	color:#fff;	
+}
+.connection_info{
+	margin:40px; 
+	width: calc(100% - 80);
+	height: 50%;
+}
+.connection_info>h2{
+	font-size: 16px;
+	color: #AAAAAA
+}
+.icon_box{
+	margin-left: 30px;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content:space-around;
+	color:#FF5511;
+}
+i{
+	border-right: 1px solid;	
+}
+
+.mail:after{
+	content: "M10503330@gapps.ntust.edu.tw";
+	}
+.phone:after{
+	content: "09785167008";
+	}
+
+/* skill */
+.listSkill{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+}
+.listSkill>li{
+	width: 33%;
+	position: relative;
+	padding: 10px;
+}
+.circle{
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	background-color: #9955FF;
+	position: relative;
+	top:0;
+	left:50%;
+	transform: translateX(-50%);
+	overflow: hidden;
+}
+.circle_color,.circle>*:after{
+	background-color: #7700FF;
+}
+.circle:after{
+	content: "";
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	background-color: #FFFFBB;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+.circle>.C90{
+	height: 40px;
+	width: 40px;
+	
+	position: absolute;
+	top:0;
+	left:50%;	
+}
+.circle>.C135{
+	height: 1px;
+	width: 40px;
+	
+	position: absolute;
+	bottom:25%;
+	left:50%;
+	transform:rotate(45deg);
+}
+.circle>.C135:after{
+	content: "";
+	height: 40px;
+	width: 40px;
+	
+	position: absolute;
+	bottom:0%;
+	left:0%;	
+}
+.circle>.C180{
+	height: 40px;
+	width: 40px;
+	
+	position: absolute;
+	top:50%;
+	left:50%;	
+}
+.circle>.C225{
+	height: 1px;
+	width: 40px;
+	position: absolute;
+	bottom:25%;
+	left:0%;
+	transform:rotate(-45deg);
+}
+.circle>.C225:after{
+	content: "";
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	top:0%;
+	left:0%;	
+}
+.circle>.C270{
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	top:50%;
+	left:0;	
+}
+.circle>.C315{
+	height: 1px;
+	width: 40px;
+	position: absolute;
+	top:25%;
+	left:0%;
+	transform:rotate(45deg);
+}
+.circle>.C315:after{
+	content: "";
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	top:0%;
+	left:0%;	
+}
+.circle>.C360{
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	top:0;
+	left:0;		
+}
+/* Programming Skill */
+.listProgram
+{
+
+}
+.listProgram>li{
+	display: flex;	
+	margin: 10px; 
+	justify-content: space-between;
+}
+.bar{
+	height: 20px;
+	width: 75%;
+	border-radius: 20px;
+	overflow: hidden;
+	position: relative;
+	background-color: #E38EFF;
+	
+}
+.bar_color{
+	background-color: #E93EFF;
+	height: 100%;
+
+}
+.bar_C10{	
+	width: 10%;
+}
+.bar_C20{
+	width: 20%;
+}
+.bar_C30{
+	width: 30%;
+}
+.bar_C40{	
+	width: 40%;
+}
+.bar_C50{	
+	width: 50%;
+}
+.bar_C60{	
+	width: 60%;
+}
+.bar_C70{	
+	width: 70%;
+}
+.bar_C75{	
+	width: 75%;
+}
+.bar_C80{	
+	width: 80%;
+}
+.bar_C85{	
+	width: 85%;
+}
+.bar_C90{	
+	width: 90%;
+}
+.bar_C100{	
+	width: 100%;
+}
+
+/* Education/Experience */
+.listExperience{
+	display: flex;
+	flex-direction: column;
+	padding: 8px;
+	padding-right: 6px;
+}
+.listExperience>li{
+	padding: 6px;
+	display: flex;
+	justify-content: space-between;
+	text-align: left;
+	
+}
+.listExperience_info{
+	width: 100%;
+	padding-left: 8px;
+}
+.date{
+	padding-right:5px;
+	border-right: 3px solid #D1BBFF;
+}
